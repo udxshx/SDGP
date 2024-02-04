@@ -1,11 +1,8 @@
 const mongoose = require('mongoose');
-const user = require('Backend/models/userModel');
-const organizationModel =  mongoose.Schema({
-    __typename: 'organizationModel',
-    __id: {
-        type: String,
-        required: true
-    },
+
+const Schema = mongoose.Schema;
+
+const organizationSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -13,34 +10,9 @@ const organizationModel =  mongoose.Schema({
     description: {
         type: String,
         required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    phone: {
-        type: String,
-        required: true
-    },
-    website: {
-        type: String,
-        required: false
-    },
-    logo: [
-        {
-          public_id: {
-            type: String, //rename with id_logo 
-            required: true,
-          },
-          url: {
-            type: String,  //use gdrive://
-            required: true,
-          },
-        },
-      ],
-    users: [user ,{
-        role: 'admin',
-    }],
+    }
+}, {
+    timestamps: true,
 });
-const Organization = Mongoose.model("organizationModel", organizationModel)
-module.exports = Organization;
+
+module.exports = mongoose.model('Organization', organizationSchema);
