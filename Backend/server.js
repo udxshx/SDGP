@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const organizationRoutes = require('/routes/organizationRoutes');
+const organizationRoutes = require('./routes/organizationRoutes');
+require('dotenv').config();
 
 //express app
 const app = express();
@@ -22,7 +23,7 @@ mongoose.connect(process.env.MONGO_URI)
    console.log('connected to mongodb');
 
    //listen to port
-   app.listen(process.env.PORT, () => {
+   app.listen( process.env.PORT,() => {
       console.log('Listening for requests on PORT', process.env.PORT)
    })
 })
