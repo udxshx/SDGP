@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const user = require('user');
-const organization =  mongoose.Schema({
-    __typename: 'organization',
+const user = require('Backend/models/userModel');
+const organizationModel =  mongoose.Schema({
+    __typename: 'organizationModel',
     __id: {
         type: String,
         required: true
@@ -42,5 +42,5 @@ const organization =  mongoose.Schema({
         role: 'admin',
     }],
 });
-const Organization = Mongoose.model("organization", organization)
+const Organization = Mongoose.model("organizationModel", organizationModel)
 module.exports = Organization;
