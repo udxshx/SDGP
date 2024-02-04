@@ -1,4 +1,6 @@
-const organization = new Schema({
+const mongoose = require('mongoose');
+const user = require('user');
+const organization =  mongoose.Schema({
     __typename: 'organization',
     __id: {
         type: String,
@@ -36,4 +38,9 @@ const organization = new Schema({
           },
         },
       ],
+    users: [user ,{
+        role: 'admin',
+    }],
 });
+const Organization = Mongoose.model("organization", organization)
+module.exports = Organization;
