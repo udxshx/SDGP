@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb1d85d3-cb76-4686-aa1a-c741a2134cb3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Backend/controllers/organizationController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/controllers/schoolController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/controllers/seminarController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/controllers/volunteerController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/models/schoolModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/models/seminarModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/models/volunteerModel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/routes/schoolRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/routes/seminarRoutes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/routes/volunteerRoutes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/controllers/organzationController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/routes/organizationRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/routes/organizationRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/controllers/organizationController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/controllers/organizationController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +33,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
   <component name="ProjectId" id="2bjDjJE8Dj1Hj6qNJeEtUgFeBvj" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,8 +46,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "fix-12",
+    "git-widget-placeholder": "fix-22",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -90,6 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706719728105</updated>
       <workItem from="1706719730902" duration="125000" />
+      <workItem from="1707137738594" duration="1221000" />
     </task>
     <servers />
   </component>
