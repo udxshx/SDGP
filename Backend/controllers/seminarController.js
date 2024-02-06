@@ -26,7 +26,7 @@ const getSeminar = async (req, res) => {
 
 //create a seminar
 const createSeminar = async (req, res) => {
-    const { name, description, date, time, location, image } = req.body;
+    const { name, description} = req.body;
 
     let emptyFields = [];
 
