@@ -7,19 +7,7 @@ const seminarSchema = new Schema({
         type: String,
         required: true
     },
-    organization: {
-        type: String,
-        required: true
-    },
     description: {
-        type: String,
-        required: true
-    },
-    date: {
-        type: Date,
-        required: true
-    },
-    location: {
         type: String,
         required: true
     }

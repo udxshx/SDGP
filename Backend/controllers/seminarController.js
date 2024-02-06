@@ -12,13 +12,13 @@ const getSeminar = async (req, res) => {
     const { id } = req.params;
 
     if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(404).send('No seminar with that id');
+        return res.status(404).json({error: "No such seminar with that id"});
     }
 
     const seminar = await Seminar.findById(id);
 
     if(!seminar){
-        return res.status(404).send('No seminar with that id');
+        return res.status(404).json({error: " No such seminar with that id"});
     }
 
     res.status(200).json(seminar);
@@ -38,35 +38,15 @@ const createSeminar = async (req, res) => {
         emptyFields.push('description');
     }
 
-    if(!date) {
-        emptyFields.push('date');
-    }
-
-    if(!time) {
-        emptyFields.push('time');
-    }
-
-    if(!location) {
-        emptyFields.push('location');
-    }
-
-    if(!image) {
-        emptyFields.push('image');
-    }
-
     if(emptyFields.length > 0) {
-        return res.status(400).send(`The following fields are required'`, emptyFields);
+        return res.status(400).json({error:`The following fields are required'`, emptyFields});
     }
 
     //add to database
     try{
         const seminar = await Seminar.create({
             name,
-            description,
-            date,
-            time,
-            location,
-            image
+            description
         });
         res.status(200).json(seminar);
     }catch (error) {
