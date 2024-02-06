@@ -1,9 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
+
 const organizationRoutes = require('./routes/organizationRoutes');
 const volunteerRoutes = require('./routes/volunteerRoutes');
 const schoolRoutes = require('./routes/schoolRoutes');
 const seminarRoutes = require('./routes/seminarRoutes');
+
 require('dotenv').config();
 
 //express app

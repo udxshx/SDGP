@@ -12,13 +12,13 @@ const getSchool = async (req, res) => {
     const { id } = req.params;
 
     if(!mongoose.Types.ObjectId.isValid(id)){
-        return res.status(404).send('No school with that id');
+        return res.status(404).json({error: ' No school with that id'});
     }
 
     const school = await School.findById(id);
 
     if(!school){
-        return res.status(404).send('No school with that id');
+        return res.status(404).json({error: ' No school with that id'});
     }
 
     res.status(200).json(school);
@@ -26,7 +26,7 @@ const getSchool = async (req, res) => {
 
 //create a school
 const createSchool = async (req, res) => {
-    const { name, address, contact, email, website, description, image } = req.body;
+    const { name, address } = req.body;
 
     let emptyFields = [];
 
@@ -38,34 +38,14 @@ const createSchool = async (req, res) => {
         emptyFields.push('address');
     }
 
-    if(!contact){
-        emptyFields.push('contact');
-    }
-
-    if(!email){
-        emptyFields.push('email');
-    }
-
-    if(!website){
-        emptyFields.push('website');
-    }
-
-    if(!description){
-        emptyFields.push('description');
-    }
-
-    if(!image){
-        emptyFields.push('image');
-    }
-
     if(emptyFields.length > 0){
         return res.status(400).send(`The following fields are required:`, emptyFields);
     }
 
     //add to database
     try {
-        const newSchool = new School({ name, address, contact, email, website, description, image });
-        res.status(200).json(newSchool);
+        const school = await School.create({name, address});
+        res.status(200).json(school);
     }catch (error) {
         res.status(400).json({ error: error.message });
     }
