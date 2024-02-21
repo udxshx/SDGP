@@ -1,0 +1,94 @@
+.request-form-container {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .back-button {
+    border: none;
+    background: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  } 
+  
+  .request-form h1 {
+    text-align: center;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.105);
+  }
+  
+  .request-form input[type="text"],
+  .request-form input[type="date"],
+  .request-form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  
+  .submit-button {
+    background-color: #4B3F6B;
+    color: rgb(251, 248, 248);
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+    
+  }
+  
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkbox-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+  
+  .checkbox-container input:checked ~ ::before {
+    background-color: #4B3F6B;
+  }
+  
+  .form-footer {
+    border-top: 2px solid #4B3F6B;
+    color: #4B3F6B;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .fuck{
+    background-color: #eee;
+
+  }
